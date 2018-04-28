@@ -3,7 +3,7 @@
 		<span (click)="toggle(album)">{{ album.name }}</span>
 		<div *ngIf="album.show" style="width: 100%">
 		<div class="song" style="text-align: left" *ngFor="let song of album.songs">
-		{{song.name}}
+		<app-song [song]="song"></app-song>
 		</div>
 			<!-- <div [id]="album.id"
 				style="text-align: left; margin-left: 3%; display: none; width:100%"

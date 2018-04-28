@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Song} from '../album/song';
+import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'app-song',
@@ -7,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SongComponent implements OnInit {
 
-  constructor() { }
-
+  constructor() {}
+  @Input() song: Song = null;
   ngOnInit() {
   }
 

@@ -1,4 +1,5 @@
 import { AlbumService } from '../service/album.service';
+import { Album } from './album';
 import {Component, OnInit} from '@angular/core';
 
 @Component({
@@ -8,7 +9,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AlbumComponent implements OnInit {
 
-  albums = null;
+  albums: Album = null;
   constructor(private albumService: AlbumService) {}
   getAlbums(): void {
     this.albumService.getAlbums().subscribe(speed =>
@@ -19,7 +20,7 @@ export class AlbumComponent implements OnInit {
     this.getAlbums();
   }
 
- toggle(album) {
+ toggle(album: Album): void {
    album.show = !album.show;
  }
 }
